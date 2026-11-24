@@ -1,0 +1,4 @@
+# 复制为 configs/local.yaml（不进 git），写只属于这台机器的设置。
+# 合并顺序：实验配置 -> local.yaml -> 命令行覆盖。
+# run:
+#   output_root: /mnt/bigdisk/outputs/expkit

@@ -1,0 +1,9 @@
+# E001 pi-estimate：用 10 万个随机点估计 π，模板自带的示例实验。
+# 开新实验时复制这个文件，改成下一个编号和新名字（E002_<改了什么>.yaml），并在 docs/experiments.md 登记一行。
+# 需要组合多个部件时可以写成列表，后面的覆盖前面的：
+#   extends: [../base.yaml, ../model/small.yaml]
+extends: ../base.yaml
+
+task:
+  n_batches: 100
+  batch_size: 1000

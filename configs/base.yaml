@@ -1,0 +1,12 @@
+# 所有实验共享的默认值。实验配置用 extends 继承它，只写和它不同的部分。
+# 实验的名字就是配置文件名（如 E001_pi-estimate），这里不再重复写。
+run:
+  entry: expkit.experiment:estimate_pi    # 实验入口，"模块:函数"
+  seed: 0
+  label: null                             # 可选，只描述同一实验下的变体，如 seed1、lr-3e-4；会出现在运行目录名里
+  debug: false                            # 调试叠加层（configs/debug/）把它设为 true，运行写到 <output_root>/_debug/ 下
+  output_root: outputs                    # 相对项目根目录；想放到别的盘就在 configs/local.yaml 里改
+
+task:
+  n_batches: 10
+  batch_size: 1000

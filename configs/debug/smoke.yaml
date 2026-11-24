@@ -1,0 +1,10 @@
+# 冒烟叠加层：叠在实验配置后面，几秒内跑完，只确认环境和流水线是通的。
+#   expkit run -c configs/experiments/E001_pi-estimate.yaml -c configs/debug/smoke.yaml
+# 运行写到 <output_root>/_debug/ 下，不占实验编号，不进登记表，也不出现在 report 里。
+# 下面的 task 键对应示例实验；你的项目在这里缩小自己的规模参数（样本数、轮数等）。
+run:
+  debug: true
+
+task:
+  n_batches: 3
+  batch_size: 100
